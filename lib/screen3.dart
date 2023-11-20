@@ -65,18 +65,6 @@ class _Screen3State extends State<Screen3> {
     });
   }
 
-  int _cornbread = 0;
-  void _incrementCornbread() {
-    setState(() {
-      _cornbread++;
-    });
-  }
-
-  void _decrementCornbread() {
-    setState(() {
-      _cornbread--;
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

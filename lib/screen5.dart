@@ -4,80 +4,243 @@ class Screen5 extends StatefulWidget {
   const Screen5({super.key});
 
   @override
-  Screen5State createState() => Screen5State();
+  State<Screen5> createState() => _Screen5State();
 }
 
-class Screen5State extends State<Screen5> {
-  String message = 'Initial Message';
+class _Screen5State extends State<Screen5> {
+
+  int _krapfen = 0;
+  void _incrementKrapfen() {
+    setState(() {
+      _krapfen++;
+    });
+  }
+  void _decrementKrapfen() {
+    setState(() {
+      _krapfen--;
+    });
+  }
+
+  int _sauerkraut = 0;
+  void _incrementSauerkraut() {
+    setState(() {
+      _sauerkraut++;
+    });
+  }
+  void _decrementSauerkraut() {
+    setState(() {
+      _sauerkraut--;
+    });
+  }
+
+  int _smorrebrod = 0;
+  void _incrementSmorrebrod() {
+    setState(() {
+      _smorrebrod++;
+    });
+  }
+  void _decrementSmorrebrod() {
+    setState(() {
+      _smorrebrod--;
+    });
+  }
+
+  int _amatriciana = 0;
+  void _incrementAmatriciana() {
+    setState(() {
+      _amatriciana++;
+    });
+  }
+  void _decrementAmatriciana() {
+    setState(() {
+      _amatriciana--;
+    });
+  }
+
+  int _tortelli = 0;
+  void _incrementTortelli() {
+    setState(() {
+      _tortelli++;
+    });
+  }
+  void _decrementTortelli() {
+    setState(() {
+      _tortelli--;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Central Asian Kitchen'),
+        title: const Text('European Kitchen'),
         leading: IconButton(
           onPressed: () {
-            Navigator.pop(context, message);
+            Navigator.pop(context);
           },
           icon: const Icon(Icons.arrow_back),
         ),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Message: $message'),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () async {
-                var newMessage = await Navigator.pushNamed(context, '/screen5_update', arguments: message);
-                if (newMessage != null) {
-                  setState(() {
-                    message = newMessage.toString();
-                  });
-                }
-              },
-              child: const Text('Update Message'),
+      body: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "images/european.jpg",
+                  width: 360,
+                  height: 270,
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.next_week),
-            label: 'Screen 2',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.image),
-            label: 'Screen 3',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Screen 4',
+          const Text("European Menu"),
+          const SizedBox(height: 20),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Text("Krapfen", style: TextStyle(fontWeight: FontWeight.bold),),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: _decrementKrapfen,
+                        child: const Text(' - '),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          '$_krapfen',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: _incrementKrapfen,
+                        child: const Text(' + '),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Text("Sauerkraut", style: TextStyle(fontWeight: FontWeight.bold)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: _decrementSauerkraut,
+                        child: const Text(' - '),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          '$_sauerkraut',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: _incrementSauerkraut,
+                        child: const Text(' + '),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Text("Smorrebrod", style: TextStyle(fontWeight: FontWeight.bold),),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: _decrementSmorrebrod,
+                        child: const Text(' - '),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          '$_smorrebrod',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: _incrementSmorrebrod,
+                        child: const Text(' + '),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Text("Amatriciana", style: TextStyle(fontWeight: FontWeight.bold),),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: _decrementAmatriciana,
+                        child: const Text(' - '),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          '$_amatriciana',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: _incrementAmatriciana,
+                        child: const Text(' + '),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const Text("Tortelli", style: TextStyle(fontWeight: FontWeight.bold),),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ElevatedButton(
+                        onPressed: _decrementTortelli,
+                        child: const Text(' - '),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 10, right: 10),
+                        child: Text(
+                          '$_tortelli',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: _incrementTortelli,
+                        child: const Text(' + '),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20),
+            ],
           ),
         ],
-        onTap: (index) {
-          switch (index) {
-            case 0:
-              Navigator.pushNamed(context, '/');
-              break;
-            case 1:
-              Navigator.pushNamed(context, '/screen2');
-              break;
-            case 2:
-              Navigator.pushNamed(context, '/screen3');
-              break;
-            case 3:
-              Navigator.pushNamed(context, '/screen4');
-              break;
-          }
-        },
       ),
+
     );
   }
 }

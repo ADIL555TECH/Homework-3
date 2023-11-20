@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hw_3/screen6.dart';
+import 'package:hw_3/screen7.dart';
 import 'screen1.dart';
 import 'screen2.dart';
 import 'screen3.dart';
@@ -23,8 +25,8 @@ class MyApp extends StatelessWidget {
         '/screen3': (context) => const Screen3(),
         '/screen4': (context) => const Screen4(),
         '/screen5': (context) => const Screen5(),
-        '/screen6': (context) => const Screen5(),
-        '/screen7': (context) => const Screen5(),
+        '/screen6': (context) => const Screen6(),
+        '/screen7': (context) => const Screen7(),
       },
     );
   }

@@ -1,79 +1,79 @@
 import 'package:flutter/material.dart';
 
-class Screen2 extends StatefulWidget {
-  const Screen2({super.key});
+class Screen7 extends StatefulWidget {
+  const Screen7({super.key});
 
   @override
-  State<Screen2> createState() => _Screen2State();
+  State<Screen7> createState() => _Screen7State();
 }
 
-class _Screen2State extends State<Screen2> {
+class _Screen7State extends State<Screen7> {
 
-  int _anhui = 0;
-  void _incrementAnhui() {
+  int _udon = 0;
+  void _incrementUdon() {
     setState(() {
-      _anhui++;
+      _udon++;
     });
   }
-  void _decrementAnhui() {
+  void _decrementUdon() {
     setState(() {
-      _anhui--;
-    });
-  }
-
-  int _fujian = 0;
-  void _incrementFujian() {
-    setState(() {
-      _fujian++;
-    });
-  }
-  void _decrementFujian() {
-    setState(() {
-      _fujian--;
+      _udon--;
     });
   }
 
-  int _hunan = 0;
-  void _incrementHunan() {
+  int _tofu = 0;
+  void _incrementTofu() {
     setState(() {
-      _hunan++;
+      _tofu++;
     });
   }
-  void _decrementHunan() {
+  void _decrementTofu() {
     setState(() {
-      _hunan--;
-    });
-  }
-
-  int _shandon = 0;
-  void _incrementShandon() {
-    setState(() {
-      _shandon++;
-    });
-  }
-  void _decrementShandon() {
-    setState(() {
-      _shandon--;
+      _tofu--;
     });
   }
 
-  int _kyodo = 0;
-  void _incrementKyodo() {
+  int _tempura = 0;
+  void _incrementTempura() {
     setState(() {
-      _kyodo++;
+      _tempura++;
+    });
+  }
+  void _decrementTempura() {
+    setState(() {
+      _tempura--;
     });
   }
 
-  void _decrementKyodo() {
+  int _yakitori = 0;
+  void _incrementYakitori() {
     setState(() {
-      _kyodo--;
+      _yakitori++;
     });
   }
+  void _decrementYakitori() {
+    setState(() {
+      _yakitori--;
+    });
+  }
+
+  int _sashimi = 0;
+  void _incrementSashimi() {
+    setState(() {
+      _sashimi++;
+    });
+  }
+  void _decrementSashimi() {
+    setState(() {
+      _sashimi--;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Asian Kitchen'),
+        title: const Text('Japanese Kitchen'),
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -89,14 +89,14 @@ class _Screen2State extends State<Screen2> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  "images/asian.jpg",
+                  "images/japan.jpg",
                   width: 360,
                   height: 270,
                 ),
               ],
             ),
           ),
-          const Text("Asian Menu"),
+          const Text("Japanese Menu"),
           const SizedBox(height: 20),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -104,23 +104,23 @@ class _Screen2State extends State<Screen2> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Text("Anhui", style: TextStyle(fontWeight: FontWeight.bold),),
+                  const Text("Udon", style: TextStyle(fontWeight: FontWeight.bold),),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
-                        onPressed: _decrementAnhui,
+                        onPressed: _decrementUdon,
                         child: const Text(' - '),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Text(
-                          '$_anhui',
+                          '$_udon',
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: _incrementAnhui,
+                        onPressed: _incrementUdon,
                         child: const Text(' + '),
                       ),
                     ],
@@ -131,23 +131,23 @@ class _Screen2State extends State<Screen2> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Text("Fujian", style: TextStyle(fontWeight: FontWeight.bold)),
+                  const Text("Tofu", style: TextStyle(fontWeight: FontWeight.bold)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
-                        onPressed: _decrementFujian,
+                        onPressed: _decrementTofu,
                         child: const Text(' - '),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Text(
-                          '$_fujian',
+                          '$_tofu',
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: _incrementFujian,
+                        onPressed: _incrementTofu,
                         child: const Text(' + '),
                       ),
                     ],
@@ -158,23 +158,23 @@ class _Screen2State extends State<Screen2> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Text("Hunan", style: TextStyle(fontWeight: FontWeight.bold),),
+                  const Text("Tempura", style: TextStyle(fontWeight: FontWeight.bold),),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
-                        onPressed: _decrementHunan,
+                        onPressed: _decrementTempura,
                         child: const Text(' - '),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Text(
-                          '$_hunan',
+                          '$_tempura',
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: _incrementHunan,
+                        onPressed: _incrementTempura,
                         child: const Text(' + '),
                       ),
                     ],
@@ -185,23 +185,23 @@ class _Screen2State extends State<Screen2> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Text("Shandon", style: TextStyle(fontWeight: FontWeight.bold),),
+                  const Text("Yakitori", style: TextStyle(fontWeight: FontWeight.bold),),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
-                        onPressed: _decrementShandon,
+                        onPressed: _decrementYakitori,
                         child: const Text(' - '),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Text(
-                          '$_shandon',
+                          '$_yakitori',
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: _incrementShandon,
+                        onPressed: _incrementYakitori,
                         child: const Text(' + '),
                       ),
                     ],
@@ -212,23 +212,23 @@ class _Screen2State extends State<Screen2> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  const Text("Kyodo", style: TextStyle(fontWeight: FontWeight.bold),),
+                  const Text("Sashimi", style: TextStyle(fontWeight: FontWeight.bold),),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       ElevatedButton(
-                        onPressed: _decrementKyodo,
+                        onPressed: _decrementSashimi,
                         child: const Text(' - '),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(left: 10, right: 10),
                         child: Text(
-                          '$_kyodo',
+                          '$_sashimi',
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: _incrementKyodo,
+                        onPressed: _incrementSashimi,
                         child: const Text(' + '),
                       ),
                     ],

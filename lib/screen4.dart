@@ -64,18 +64,6 @@ class _Screen4State extends State<Screen4> {
     });
   }
 
-  int _khaosoi = 0;
-  void _incrementKhaosoi() {
-    setState(() {
-      _tomyumgoong++;
-    });
-  }
-
-  void _decrementKhaosoi() {
-    setState(() {
-      _tomyumgoong--;
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -96,7 +84,7 @@ class _Screen4State extends State<Screen4> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
-                  "images/thaimenu.jpg",
+                  "images/thai.jpg",
                   width: 360,
                   height: 270,
                 ),
